@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import { useState, useReducer } from "react";
 import PostList from "./post/PostList";
 import UserBar from "./user/UserBar";
 import CreatePost from "./post/CreatePost";
@@ -23,8 +23,6 @@ export default function App() {
     posts: defaultPosts,
   });
   const { user, posts } = state;
-  // const [user, dispatchUser] = useReducer(userReducer, "");
-  // const [posts, dispatchPosts] = useReducer(postsReducer, defaultPosts);
   return (
     <div style={{ padding: 20 }}>
       <UserBar user={user} dispatch={dispatch} />
