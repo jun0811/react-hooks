@@ -8,7 +8,7 @@ export function postsReducer(state, action) {
       };
       return [newPost, ...state];
     default:
-      return new Error();
+      return state;
   }
 }
 
@@ -22,4 +22,11 @@ export function userReducer(state, action) {
     default:
       throw new Error();
   }
+}
+
+export default function appReducer(state, action) {
+  return {
+    user: userReducer(state.user, action),
+    posts: postsReducer(state.posts, action),
+  };
 }
