@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-export default function CreatePost({ user, posts, setPosts }) {
+export default function CreatePost({ user, posts, dispatch }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const addPosts = (e) => {
     e.preventDefault();
-    const newPost = { title, content, author: user };
     // setPosts([...posts, newPost]);
-    setPosts(posts.concat(newPost));
+    dispatch({ type: "CREATE_POST", title, content, author: user });
     setTitle("");
     setContent("");
   };
