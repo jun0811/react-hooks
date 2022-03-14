@@ -2,6 +2,7 @@ import React, { useState, useReducer } from "react";
 import PostList from "./post/PostList";
 import UserBar from "./user/UserBar";
 import CreatePost from "./post/CreatePost";
+import { userReducer, postsReducer } from "./reducers";
 
 const defaultPosts = [
   {
@@ -15,32 +16,6 @@ const defaultPosts = [
     author: "LSJ",
   },
 ];
-
-function postsReducer(state, action) {
-  switch (action.type) {
-    case "CREATE_POST":
-      const newPost = {
-        title: action.title,
-        content: action.content,
-        author: action.author,
-      };
-      return [newPost, ...state];
-    default:
-      return new Error();
-  }
-}
-
-function userReducer(state, action) {
-  switch (action.type) {
-    case "LOGIN":
-    case "REGISTER":
-      return action.username;
-    case "LOGOUT":
-      return "";
-    default:
-      throw new Error();
-  }
-}
 
 export default function App() {
   const [user, dispatchUser] = useReducer(userReducer, "");
