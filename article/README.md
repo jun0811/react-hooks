@@ -1,5 +1,5 @@
 ---
-typora-root-url: ./asset
+
 ---
 
 [toc]
@@ -230,7 +230,7 @@ ex) src/api/  ,   src/components/
 
 간단하게 목업을 작성하였습니다.
 
-<img src="/image-20220314154549207.png" alt="image-20220314154549207" style="zoom:50%;" />
+<img src="./asset/image-20220314154549207.png" alt="image-20220314154549207" style="zoom:50%;" />
 
 먼저 제일 작은 단위로 나누어서 구분해놓았습니다.
 
@@ -310,7 +310,7 @@ export default App;
 
 이제 서버를 켜서 확인하면 잘 되는 것을 테스트 할 수 있습니다.
 
-![image-20220314154649347](/image-20220314154649347.png)
+![image-20220314154649347](./asset/image-20220314154649347.png)
 
 이제 로그인을 했으니 로그아웃을 만들어 보겠습니다.
 
@@ -503,9 +503,9 @@ export default function App () {
 
 모든 Component를 구현했다면 이제 합쳐서 한 화면에 모두 나타내야 하는 일만 남았습니다.
 
-<img src="/image-20220314154743426.png" alt="image-20220314154743426" style="zoom:50%;" />
+<img src="./asset/image-20220314154743426.png" alt="image-20220314154743426" style="zoom:50%;" />
 
-<img src="/image-20220314154800630.png" alt="image-20220314154800630" style="zoom:50%;" />
+<img src="./asset/image-20220314154800630.png" alt="image-20220314154800630" style="zoom:50%;" />
 
 ## Hook 집어넣기
 
